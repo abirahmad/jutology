@@ -29,12 +29,12 @@ module.exports = {
     remotePatterns: [
       {
         protocol: "http",
-        hostname: "api.akijplastics.com",
+        hostname: "api.jutology.com",
         port: "8000", // Add the port if needed
         pathname: "/images/**", // Allow specific paths or adjust as per your need
       },
     ],
-    domains: ["api.akijplastics.com", "127.0.0.1"],
+    domains: ["api.jutology.com", "127.0.0.1"],
   },
   // Removed: output: 'export',
 };

@@ -126,7 +126,7 @@ export default function Menu() {
 
   return (
     <header
-      className={`fixed top-0  left-0 w-full h-12 bg-white border-b-2 ${
+      className={`fixed top-0  left-0 w-full h-12 bg-yellow-600 border-b-2 ${
         menuOpen ? "h-full bg-opacity-100" : ""
       } transition-all duration-300 ease-out z-[100]`}
     >
@@ -157,7 +157,7 @@ export default function Menu() {
               <Image
                 height={32}
                 width={130}
-                src={setting.logo_url}
+                src={'/jutology.png'}
                 // src="/black_logo.svg"
                 alt="Akij Plastics"
                 className={`${menuOpen ? "hidden" : " w-[130px] max-h-8"}`}

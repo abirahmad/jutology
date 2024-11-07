@@ -5,8 +5,8 @@ import YoutubeLink from "./component/YoutubeLink";
 import MiddleBanner from "./product/MiddleBanner";
 // import '../styles/globals.css';
 export const metadata = {
-  title: "Akij Plastics",
-  description: "Welcome to the best e-commerce site for all your needs",
+  title: "Jutology",
+  description: "Welcome to Jutology by Akij",
 };
 
 export default function Home() {

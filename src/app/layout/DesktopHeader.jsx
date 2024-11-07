@@ -25,24 +25,24 @@ export default function DesktopHeader({
 
   return (
     <>
-      <div className="hidden md:flex p-4 bg-white mt-1 relative z-50 mx-auto border-b-2">
+      <div className="hidden md:flex bg-white mt-1 relative z-50 mx-auto border-b-2">
         <div className="container mx-auto flex items-center justify-between  w-[80%]">
           <Link href="/" className="flex items-center">
             {setting.logo_url ? (
               <Image
-                src={setting.logo_url}
-                height={30}
+                src="/jutology.png"
+                height={20} // Decreased height
                 width={300}
-                alt="Akij Plastics"
-                className="w-44"
+                alt="Jutology"
+                className="w-36 h-auto" // Adjusted width and let height auto-scale
               />
             ) : (
               <Image
-                src='/black_logo.svg'
-                height={30}
+                src="/jutology.png"
+                height={20} // Decreased height
                 width={300}
-                alt="Akij Plastics"
-                className="w-44"
+                alt="Jutology"
+                className="w-36 h-auto" // Adjusted width and let height auto-scale
               />
             )}
           </Link>
