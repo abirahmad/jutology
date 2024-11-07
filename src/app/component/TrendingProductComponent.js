@@ -21,12 +21,12 @@ export default function App({ products }) {
       <Swiper
         slidesPerView={2} // Default for very small screens
         centeredSlides={false}
-        slidesPerGroupSkip={1}
+        slidesPerGroupSkip={2}
         grabCursor={true}
         keyboard={{
           enabled: true,
         }}
-        spaceBetween={30}
+        spaceBetween={25}
         autoplay={{
           delay: 2500,
           disableOnInteraction: false,
@@ -50,12 +50,12 @@ export default function App({ products }) {
             slidesPerGroup: 3,
           },
           1000: {
-            slidesPerView: 5,
-            slidesPerGroup: 5,
+            slidesPerView: 4,
+            slidesPerGroup: 4,
           },
           1200: {
-            slidesPerView: 5,
-            slidesPerGroup: 5,
+            slidesPerView: 4,
+            slidesPerGroup: 4,
           },
         }}
         pagination={{

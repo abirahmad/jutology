@@ -14,13 +14,13 @@ export default function YoutubeLink() {
           {/* Circle Logo */}
 
           <img
-            src="/icons/amibyakij.svg"
+            src="/jutology-footer.png"
             alt=""
             srcSet=""
             className="object-contain"
           />
         </div>
-        <div className="text-sm   grid grid-cols-2    xs:gap-2 xl:w-[80%] xs:w-[73%] mt-5 mx-auto">
+        {/* <div className="text-sm   grid grid-cols-2    xs:gap-2 xl:w-[80%] xs:w-[73%] mt-5 mx-auto">
           <a
             href={setting?.youtube_link}
             target="_blank"
@@ -37,7 +37,7 @@ export default function YoutubeLink() {
             <img src="/icons/pdf.svg" alt="" srcSet="" className="mr-1" />
             Download Catalogue
           </a>
-        </div>
+        </div> */}
       </div>
       {/* Bottom Right Circular Design */}
       <div className="absolute bottom-0 right-0 h-full xs:w-[72%] xl:w-[16%] xs:opacity-30 xl:opacity-100">

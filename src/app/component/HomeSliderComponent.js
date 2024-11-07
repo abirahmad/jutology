@@ -63,7 +63,7 @@ export default function HomeSliderComponent({ slider }) {
               <div key={i} className="flex justify-center items-center">
                 <Image
                   height={100}
-                  width={400}
+                  width={500}
                   src={"/building.jpg"}
                   // src="/black_logo.svg"
                   alt="Akij Plastics"
