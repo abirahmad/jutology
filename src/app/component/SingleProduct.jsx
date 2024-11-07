@@ -24,7 +24,7 @@ export default function TrendingSliderProduct({ product, index }) {
               <img
                 src={product?.image}
                 alt={product?.name}
-                className="w-full p-2 cursor-pointer transform transition-all duration-300 ease-in-out border border-transparent hover:scale-110"
+                className="w-full h-[200px] p-2 cursor-pointer transform transition-all duration-300 ease-in-out border border-transparent hover:scale-110"
               />
             </a>
           ) : (
@@ -32,7 +32,7 @@ export default function TrendingSliderProduct({ product, index }) {
               <img
                 src={product?.image}
                 alt={product?.name}
-                className="w-full p-2 cursor-pointer transform transition-all duration-300 ease-in-out border border-transparent hover:scale-110"
+                className="w-full h-[200px] p-2 cursor-pointer transform transition-all duration-300 ease-in-out border border-transparent hover:scale-110"
               />
             </Link>
           )}
