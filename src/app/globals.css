@@ -1,0 +1,221 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+/* app/globals.css or styles/globals.css */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=SF+Pro+Display");
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* styles.css */
+.magnifier-container {
+  position: relative;
+  background-color: blue;
+}
+body {
+  font-family: "Poppins", sans-serif !important;
+  /* font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif; */
+
+}
+
+.magnifier-lens {
+  border: 2px solid #000;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); */
+  width: 800px !important;
+  background: white !important;
+  /* border-radius: 50%; */
+}
+
+.magnifier-image {
+  transition: transform 3.2s ease;
+}
+.header-nav {
+  @apply text-gray-500 md:py-0 block  py-6 rounded-lg;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-slide-in {
+  animation: slideIn 1s ease-in-out forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 1s ease-in-out 0.3s forwards;
+}
+
+.animation-trigger {
+  opacity: 0; /* Start with hidden element */
+}
+
+.animation-trigger.active .animate-slide-in {
+  animation: slideIn 1s ease-in-out forwards;
+}
+
+.animation-trigger.active .animate-fade-in {
+  animation: fadeIn 1s ease-in-out 0.3s forwards;
+}
+
+.header-nav {
+  position: relative;
+  display: inline-block;
+  color: black;
+}
+
+.header-nav::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -68%;
+  width: 100%;
+  height: 2px;
+  background-color: currentColor; /* Uses the text color */
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
+}
+
+.header-nav:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+.underline:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* styles/globals.css */
+
+@layer utilities {
+  .clip-path-custom {
+    clip-path: inset(0 var(--_f) 0 0 round var(--r));
+    transition: clip-path 0.5s, transform 0.5s;
+    transform: perspective(400px) var(--_t);
+  }
+
+  .clip-path-custom:hover {
+    clip-path: inset(0 0 0 var(--_f) round var(--r));
+    --_t: translateX(calc(-1 * var(--_f))) rotateY(calc(-1 * var(--_a)));
+  }
+
+  .perspective-800 {
+    perspective: 800px;
+  }
+}
+
+#header-product-category ul li {
+  color: rgb(118, 112, 112);
+  font-size: 13px;
+}
+#header-product-category h3 {
+  color: rgb(48, 45, 45);
+}
+/* custom-slider.css */
+.slick-dots li button:before {
+  background: white !important;
+  color: white !important;
+  border-radius: 50%;
+  opacity: 1 !important;
+  height: 7px !important;
+  width: 7px !important;
+}
+.slick-dots li button:hover {
+  background: white !important;
+  color: white !important;
+  border-radius: 50%;
+  opacity: 1 !important;
+  height: 7px !important;
+  width: 7px !important;
+}
+
+.slick-dots li.slick-active button:before {
+  background-color: #a7c7e7 !important;
+  color: #a7c7e7 !important;
+  border-radius: 50%;
+  opacity: 1 !important;
+  height: 7px !important;
+  width: 7px !important;
+}
+
+.swiper-pagination {
+  position: relative !important;
+  bottom: -5px !important;
+}
+.swiper-pagination-bullet-active {
+  opacity: var(--swiper-pagination-bullet-opacity, 1);
+  background: #a7c7e7 !important;
+}
+.slick-dots li button:before {
+  font-size: -1px !important;
+  line-height: 10px !important;
+}
+.slick-dots li button {
+  padding: 0px !important;
+}
+
+.text-clr {
+  color: #1d1d1f;
+  color: #333336;
+}
+.sustain-certificate-color {
+  color: #4b4b4b;
+}
+.sustain-color1 {
+  color: #cad9e8;
+}
+/* styles.css */
+.buy-btn {
+  @apply w-full  border-2 border-gray-300 rounded-full shadow-sm text-xs sm:text-sm p-1;
+}
+
+.buy-btn:hover {
+  background-color: #a7c7e7;
+}
+.dmsans {
+  font-family: "DM Sans", sans-serif !important;
+}
+
+.menu-link {
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+}
+
+.menu-link.active {
+  opacity: 1;
+}
